@@ -1,45 +1,130 @@
-/* --- Gallery Styling --- */
+/* 1. Navigation Styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+}
 
-/* 1. Ensure all elements within the gallery are resized */
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* 2. General Body and Text Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+    color: #333;
+}
+
+/* 3. Destination Card Styling */
+.destination-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.destination-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card h2, .destination-card h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.destination-card img {
+    border-radius: 10px;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 4. Gallery and Video Styling */
 .gallery img, 
 .video-gallery video {
-    /* Make the images/videos take up the full width of their grid area */
     width: 100%; 
-    /* Maintain aspect ratio (prevents stretching) */
     height: auto; 
-    /* Add a small gap between gallery items */
     margin-bottom: 15px;
-    /* Optional: Make items look neat with a border and subtle shadow */
     border: 1px solid #ddd;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
 }
 
-/* 2. Apply Grid Layout to the Photo Gallery */
 .gallery {
     display: grid;
-    /* Create three columns of equal width */
     grid-template-columns: repeat(3, 1fr); 
-    /* Add spacing (gutters) between the grid items */
     gap: 20px;
+    padding: 20px;
 }
 
-/* 3. Apply Grid Layout to the Video Gallery */
 .video-gallery {
     display: grid;
-    /* Use two columns for a good video size on desktop */
     grid-template-columns: repeat(2, 1fr); 
-    /* Add spacing (gutters) between the grid items */
     gap: 20px;
+    padding: 20px;
 }
 
-/* 4. Make the layout responsive for small screens (like phones) */
+/* 5. Footer Styling */
+footer {
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 6. Responsive Layout for Mobile */
 @media (max-width: 768px) {
-    /* On smaller screens, the photo gallery switches to 2 columns */
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
-    /* On smaller screens, the video gallery switches to 1 column */
     .video-gallery {
         grid-template-columns: 1fr;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
     }
 }
