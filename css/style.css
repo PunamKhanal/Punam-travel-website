@@ -1,0 +1,45 @@
+/* --- Gallery Styling --- */
+
+/* 1. Ensure all elements within the gallery are resized */
+.gallery img, 
+.video-gallery video {
+    /* Make the images/videos take up the full width of their grid area */
+    width: 100%; 
+    /* Maintain aspect ratio (prevents stretching) */
+    height: auto; 
+    /* Add a small gap between gallery items */
+    margin-bottom: 15px;
+    /* Optional: Make items look neat with a border and subtle shadow */
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Apply Grid Layout to the Photo Gallery */
+.gallery {
+    display: grid;
+    /* Create three columns of equal width */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Add spacing (gutters) between the grid items */
+    gap: 20px;
+}
+
+/* 3. Apply Grid Layout to the Video Gallery */
+.video-gallery {
+    display: grid;
+    /* Use two columns for a good video size on desktop */
+    grid-template-columns: repeat(2, 1fr); 
+    /* Add spacing (gutters) between the grid items */
+    gap: 20px;
+}
+
+/* 4. Make the layout responsive for small screens (like phones) */
+@media (max-width: 768px) {
+    /* On smaller screens, the photo gallery switches to 2 columns */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* On smaller screens, the video gallery switches to 1 column */
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+}
