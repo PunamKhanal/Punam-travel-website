@@ -13,29 +13,82 @@
             <h1>Punam.Travels</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="destinations.html">Destinations</a></li>
-                    <li><a href="tips.html">Travel Tips</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#tips">Travel Tips</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero-section">
+    <section id="home" class="hero-section">
         <h2>Capture the Moment</h2>
         <p>Sharing stories from the road, one adventure at a time.</p>
-    </section>
-
-    <main class="destination-container">
-        <div class="destination-card">
+        <div class="destination-card" style="max-width: 800px; margin: 20px auto;">
             <img src="images/travel1.jpeg" alt="Main Journey">
             <div class="card-text">
                 <h3>Welcome</h3>
-                <p>Hello! I'm Punam. I believe that traveling is the only thing you buy that makes you richer. This website is a curated collection of my favorite places and experiences.</p>
+                <p>Hello! I'm Punam. This website is a curated collection of my favorite places and experiences across the globe.</p>
             </div>
         </div>
+    </section>
+
+    <main id="destinations" class="destination-container">
+        <h2 class="section-heading">Favorite Destinations</h2>
+
+        <div class="destination-card">
+            <h3>Nepal</h3>
+            <img src="images/travel10.jpeg" alt="Nepal travel">
+            <p>Nepal is known for its majestic mountains, rich culture, and incredible natural beauty. It is home to Mount Everest and many beautiful temples.</p>
+        </div>
+
+        <div class="destination-card">
+            <h3>Finland</h3>
+            <img src="images/travel4.jpeg" alt="Finland travel">
+            <p>Finland is peaceful and beautiful, famous for the Northern Lights, thousands of lakes, and modern, clean cities.</p>
+        </div>
     </main>
+
+    <section id="tips" class="destination-container">
+        <h2 class="section-heading">Travel Tips</h2>
+        <div class="destination-card">
+            <p style="margin-bottom: 15px;"><strong>Packing:</strong> Always roll your clothes to save space and prevent wrinkles!</p>
+            <p><strong>Safety:</strong> Always keep a digital copy of your passport and important documents in your email.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="destination-container">
+        <h2 class="section-heading">Travel Gallery</h2>
+        
+        <h3 style="text-align: center; margin-bottom: 20px;">Photos</h3>
+        <div class="gallery">
+            <img src="images/travel1.jpeg" alt="Photo 1">
+            <img src="images/travel2.jpeg" alt="Photo 2">
+            <img src="images/travel3.jpeg" alt="Photo 3">
+            <img src="images/travel4.jpeg" alt="Photo 4">
+            <img src="images/travel5.jpeg" alt="Photo 5">
+            <img src="images/travel6.jpeg" alt="Photo 6">
+            <img src="images/travel7.jpeg" alt="Photo 7">
+            <img src="images/travel8.jpeg" alt="Photo 8">
+            <img src="images/travel9.jpeg" alt="Photo 9">
+            <img src="images/travel10.jpeg" alt="Photo 10">
+        </div>
+
+        <h3 style="text-align: center; margin: 40px 0 20px;">Videos</h3>
+        <div class="video-gallery">
+            <video controls><source src="videos/video1.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video2.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video3.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video4.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video5.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video6.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video7.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video8.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video9.mp4" type="video/mp4"></video>
+            <video controls><source src="videos/video10.mp4" type="video/mp4"></video>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Punam Khanal. All rights reserved.</p>
